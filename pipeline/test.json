@@ -1,0 +1,23 @@
+{
+	"name": "test",
+	"properties": {
+		"activities": [
+			{
+				"name": "set_var",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "status",
+					"value": "done"
+				}
+			}
+		],
+		"variables": {
+			"status": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}
