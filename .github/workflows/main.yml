@@ -62,7 +62,7 @@ jobs:
         with:
           resourceGroupName: ${{vars.QA_RESOURCE_GROUP}}
           dataFactoryName: ${{vars.QA_ADF_INSTANCE}}
-          armTemplateFile: ExportedArmTemplate.json
+          #armTemplateFile: ARMTemplateForFactory.json
           #armTemplateParametersFile: # ARM template parameters file name ARMTemplateParametersForFactory.json
           #additionalParameters: # Parameters which will be replaced in the ARM template. Expected format 'key1=value key2=value keyN=value'. At the minimum here you should provide the target ADF name parameter. Check the ARMTemplateParametersForFactory.json file for all the parameters that are expected in your scenario
           # skipAzModuleInstallation:  # Parameters which skip the Az module installation. Optional, default is false.      
