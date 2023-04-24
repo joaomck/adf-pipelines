@@ -55,13 +55,13 @@ jobs:
         uses: Azure/login@v1.4.6
         with:
           # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
-          creds: ${{secrets.AZURE_CREDENTIALS}}
+          creds: ${{secrets.AZURE_DEV_CREDENTIALS}}
 
       - name: data-factory-deploy
         uses: Azure/data-factory-deploy-action@v1.2.0
         with:
-          resourceGroupName: ${{vars.QA_RESOURCE_GROUP}}
-          dataFactoryName: ${{vars.QA_ADF_INSTANCE}}
+          resourceGroupName: ${{vars.DEV_RESOURCE_GROUP}}
+          dataFactoryName: ${{vars.DEV_ADF_INSTANCE}}
           #armTemplateFile: ARMTemplateForFactory.json
           #armTemplateParametersFile: # ARM template parameters file name ARMTemplateParametersForFactory.json
           #additionalParameters: # Parameters which will be replaced in the ARM template. Expected format 'key1=value key2=value keyN=value'. At the minimum here you should provide the target ADF name parameter. Check the ARMTemplateParametersForFactory.json file for all the parameters that are expected in your scenario
